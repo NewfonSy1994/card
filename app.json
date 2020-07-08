@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "web/link/link"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "信用卡专区"
+  },
+  "sitemapLocation": "sitemap65.json"
+}

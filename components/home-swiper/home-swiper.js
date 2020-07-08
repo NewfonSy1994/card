@@ -1,0 +1,30 @@
+// components/home-swiper/home-swiper.js
+Component({
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+    swiperList: {
+      type: Array
+    }
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+
+  },
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+    navigateTo(ev) {
+      const href = ev.currentTarget.dataset.href
+      wx.navigateTo({
+        url: '../../web/link/link?href=' + href,
+      })
+    }
+  }
+})

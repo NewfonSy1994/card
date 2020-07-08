@@ -1,0 +1,61 @@
+<!-- 轮播图 -->
+<my-swiper swiperList="{{swiperList}}">
+</my-swiper>
+
+<!-- 导航区 -->
+<view class="navBox">
+	<image wx:for="{{navList}}" src="{{item}}"></image>
+</view>
+
+<!-- tabbar -->
+<view class="tabbarBox">
+	<view wx:for="{{tabbarTitleList}}" class="tabbar-item" bind:tap="selectItem" data-idx="{{index}}">
+		<view class="innerBox {{currentIndex == index ? 'active' : ''}}">{{item.name}}</view>
+	</view>
+</view>
+
+<!-- 列表页 -->
+<scroll-view class="goodsList" scroll-y>
+	<!-- 优惠 -->
+	<view class="discount" hidden="{{currentIndex != 0}}">
+		<view class="discountTop">
+			<view class="discountTopItem" wx:for="{{discountList}}">
+				<image src="{{item.img_url}}"></image>
+			</view>
+		</view>
+		<!-- <view class="map">
+			<image src="../../images/text1.png"></image>
+			<image src="../../images/map.png"></image>
+		</view>
+		<view class="city">
+			<image src="../../images/text2.png"></image>
+			<view class="cityItem">
+
+			</view>
+		</view> -->
+	</view>
+	<!-- 卡片 -->
+	<view class="card" hidden="{{currentIndex != 1}}">
+		<view class="cardItem" wx:for="{{card}}">
+			<image src="{{item.img_url}}"></image>
+		</view>
+	</view>
+	<!-- 福利 -->
+	<view class="welfare" hidden="{{currentIndex != 2}}">
+		<view class="welfareItem" wx:for="{{welfare}}">
+			<image src="{{item.img_url}}"></image>
+		</view>
+	</view>
+	<!-- 家园 -->
+	<view class="home" hidden="{{currentIndex != 3}}">
+		<view class="homeItem" wx:for="{{home}}">
+			<image src="{{item.img_url}}"></image>
+		</view>
+	</view>
+	<!-- 消费券 -->
+	<view class="buy" hidden="{{currentIndex != 4}}">
+		<view class="buyItem" wx:for="{{buy}}">
+			<image src="{{item.img_url}}"></image>
+		</view>
+	</view>
+</scroll-view>

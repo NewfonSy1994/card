@@ -1,0 +1,6 @@
+<!--components/home-swiper/home-swiper.wxml-->
+<swiper class="swiper" indicator-dots autoplay circular indicator-active-color="white">
+  <swiper-item wx:for="{{swiperList}}" bind:tap="navigateTo" data-href="{{item.href}}">
+    <image src="{{item.img_url}}"></image>
+  </swiper-item>
+</swiper>
